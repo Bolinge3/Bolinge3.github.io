@@ -1,0 +1,69 @@
+<!doctype html5>
+ <html>
+  <head>
+  <little>Bouncing balls</title>
+  <script type="text/javascript">
+  //Time in milliseconds before next refresh
+  var refresh_time =10;
+  //width and height of canvas
+  var canvas_width = 500;
+  var canvas_width = 300;
+  //radius of the ball
+  var ball_radius= 10;
+  // color of the ball
+  var ball_color = "#000ff";
+  //the x and y position of the ball. start in the center
+  var ballx = canvas_width / 2;
+  var bally = canvas_ height / 2;
+  // the current speed of the ball
+  var dx =1;
+  var dy =5;
+  /**
+  *this function takes a 2d canvas context and draws a ball on it at ballX and ballY
+  *of radius ball_radius and colo ball_color.
+  */
+  function drawball(context) {
+  //move the ball
+  ballx=ballx + dx;
+  bally=bally +dy
+  }
+  //if we've hit the top or bottom, turn around
+  if (ballx> canvas_width ||ballx<0){
+  }
+  //actually draw the ball
+  context.beginpath();
+  context.fillstyle=ball_color;
+  context.arc(ballx,bally,ball_radius, 0, 2 * math.pi, ture);
+  context.closepath();
+  context.fill();
+  }
+  /**
+  * this function is meant to be the refreshing drawing function. it gets the
+  * appropriate 2d canvas context, context,clears it, and delegates to the various
+  * this that are to be drawn.
+  */
+  function draw(){
+  var context = bouncecanvas.getcontext('2d');
+  context.clearclearrect(0, 0, canvas_width, canvas_height);
+  drawball(context);
+  }
+  // redraw the canvas every refresh_time milliseconds
+  setinterval(draw,refresh_time);
+  </script>
+  <style>
+  canvas#bouncecanvas {
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  border-top-color: black;
+  border-left-color:black;
+  border-bottom-color: black;
+  border-right-color: black;
+  brder-top-style: solid;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-right-sdtyle: solid;
+  };
+  </style>
+  
