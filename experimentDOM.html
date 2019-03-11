@@ -37,6 +37,23 @@
            };
            
            setTimeout(timeUp, 3000);
+            
+           var dohomeworkalarm = function ()
+           {
+              alert("hey! you need to do your homework!");
+           };
+           var timeoutId = setTimeout(doHomeworkAlarm, 60000);
+           
+           clearTimeout(timeoutId);
+           
+           Var counter = 1;
+           
+           var printMessage = function()
+           {
+            $("body").append("<p> you have been staring"+
+                             "as your screen for"
+                             +counter+"seconds.</p>");
+           
            
            
         </script>
