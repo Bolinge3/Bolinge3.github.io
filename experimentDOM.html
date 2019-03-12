@@ -53,7 +53,9 @@
             $("body").append("<p> you have been staring"+
                              "as your screen for"
                              +counter+"seconds.</p>");
-           
+           counter++;
+           };
+           var intervalId = setInterval(printMessage, 1000);
            
            
         </script>
