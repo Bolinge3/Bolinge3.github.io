@@ -13,7 +13,27 @@
        <script scr="https://code.jquery.com/jquery-2.1.0.js"></script>
        
        <script>
-         // code gose here
+         var getRandomNumber = function(size)
+         {
+           return math.floor(math.random() *` size);
+         };
+        var width = 400;
+        var hight =400;
+       
+        var treaure = { 
+         x: getRandomNumber(width),
+         y: getRandomNumber(hight)
+       };
+ 
+       var getDistanceToTreasure = function(event, treasure)
+       {
+       var xDiffrence = event.offsetX - treasure.x;
+       var ydiffrence = event.offsety - treasure.y;
+     return math.sqrt((xDiffrence * xDifference) +
+                      (yDiffrence * yDiffrence)); 
+    }
+     
+       }
        </script>
        
    </body>
